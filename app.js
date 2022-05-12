@@ -1,8 +1,8 @@
 
 // let average = num => (num[0] + num[1] + num[2]) / num.length;
 
-console.log(average([1 , 4 , 7]));
-console.log(average([1.5, 3, 2.5, 1]));
+// console.log(average([1 , 4 , 7]));
+// console.log(average([1.5, 3, 2.5, 1]));
 
 let average = (num) => {
     let total = 0;
@@ -53,9 +53,24 @@ console.log(arr(nums = [4,5,6,7,0,1,2], target = 3));
 // Output: -1
 
 
+let change = (coins, amount) => {
+   const table = new Array(amount + 1).fill(Infinity);
+   table[0] = 0;
+   for(let coin of coins){
+       for(let i = 0; i < table.length; i++){
+           if(coin <= i) {
+               let index = i - coin;
+               let potentialAmt = table[index] + 1;
+               table[i] = Math.min(potentialAmt, table[i])
 
+           }
+       }
+   }
+   return table[table.length - 1] === Infinity ? -1 : table[table.length -1];
+};
 
-
+console.log(change(coins = [1, 2, 5], amount = 11));
+console.log(change(coins = [2], amount = 3));
 
 
 
