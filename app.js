@@ -1,20 +1,20 @@
 
 // let average = num => (num[0] + num[1] + num[2]) / num.length;
 
-// console.log(average([1 , 4 , 7]));
-// console.log(average([1.5, 3, 2.5, 1]));
+console.log(average([1 , 4 , 7]));
+console.log(average([1.5, 3, 2.5, 1]));
 
-// let average = (num) => {
-//     let total = 0;
-//     for(let i = 0; i < num.length; i++){
-//         total = total + num[i];
-//     }
-//     return total / num.length;
-// } 
+let average = (num) => {
+    let total = 0;
+    for(let i = 0; i < num.length; i++){
+        total = total + num[i];
+    }
+    return total / num.length;
+} 
 
-// console.log(average([1 , 4 , 7]));
-// console.log(average([10, 5]));
-// console.log(average([1.5, 3, 2.5, 1]));
+console.log(average([1 , 4 , 7]));
+console.log(average([10, 5]));
+console.log(average([1.5, 3, 2.5, 1]));
 
 
 // MEDIUM: Suppose an array sorted in ascending order is rotated at some pivot unknown to you 
